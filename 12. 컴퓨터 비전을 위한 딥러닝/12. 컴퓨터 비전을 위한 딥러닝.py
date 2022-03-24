@@ -17,7 +17,7 @@ numpy.random.seed(seed)
 tf.compat.v1.set_random_seed(3)
 
 (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
-X_traing = X_train.reshape(
+X_train = X_train.reshape(
     X_train.shape[0], 28, 28, 1).astype('float32') / 255
 X_test = X_test.reshape(
     X_test.shape[0], 28, 28, 1).astype('float32') / 255
@@ -26,7 +26,6 @@ Y_test = np_utils.to_categorical(Y_test)
 #======================================================================
 #12.2 CNN 모델 설정
 #======================================================================
-from keras.backend import dropout
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy
@@ -43,7 +42,7 @@ numpy.random.seed(seed)
 tf.compat.v1.set_random_seed(3)
 
 (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
-X_traing = X_train.reshape(
+X_train = X_train.reshape(
     X_train.shape[0], 28, 28, 1).astype('float32') / 255
 X_test = X_test.reshape(
     X_test.shape[0], 28, 28, 1).astype('float32') / 255
@@ -80,7 +79,6 @@ early_stopping_callback = EarlyStopping(monitor = 'val_loss',
 #======================================================================
 #12.3 훈련 검증
 #======================================================================
-from keras.backend import dropout
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy
@@ -97,7 +95,7 @@ numpy.random.seed(seed)
 tf.compat.v1.set_random_seed(3)
 
 (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
-X_traing = X_train.reshape(
+X_train = X_train.reshape(
     X_train.shape[0], 28, 28, 1).astype('float32') / 255
 X_test = X_test.reshape(
     X_test.shape[0], 28, 28, 1).astype('float32') / 255
